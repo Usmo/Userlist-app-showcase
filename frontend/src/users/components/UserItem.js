@@ -19,10 +19,7 @@ const UserItem = (props) => {
     setShowConfirmationModal(false);
     console.log(props);
     try {
-      await sendRequest(
-        `http://localhost:5000/api/users/${props.userId}`,
-        "DELETE"
-      );
+      await sendRequest(`/api/users/${props.userId}`, "DELETE");
       props.onDelete(props.userId);
     } catch (err) {}
   };
