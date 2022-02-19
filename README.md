@@ -2,7 +2,7 @@ UserList Showcase by Asmo Jurvanen
 
 1.Version: 19.02.2022
 
-Heroku link: Coming soon
+Heroku link: https://userlistasmo.herokuapp.com/
 
 This is a simple userlist management web app where users can:
 
