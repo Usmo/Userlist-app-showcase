@@ -60,7 +60,16 @@ const addUser = async (req, res, next) => {
     age,
   };
 
-  DUMMY_USERS.push(newUser);
+  if (DUMMY_USERS.length < 8) {
+    DUMMY_USERS.push(newUser);
+  } else {
+    return next(
+      new HttpError(
+        "Maximum user amount reached, delete existing users to add new ones",
+        403
+      )
+    );
+  }
   res.status(201).json({ user: newUser });
   res.body = { message: "User added" };
 };
